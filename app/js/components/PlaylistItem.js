@@ -10,7 +10,7 @@ var _                 = require('lodash')
 
 var playlistStore     = require('../stores/playlistStore')
 
-var PlaylistListItem = React.createClass({
+var PlaylistItem = React.createClass({
 
   getInitialState: function() {
     return { }
@@ -74,7 +74,7 @@ var PlaylistListItem = React.createClass({
           </div>
 
           <div className="item__meta">
-            <div className="item__artist">{this.props.playlist.user.username}</div>
+            <div className="item__artist">{this.props.playlist.user.username}/{this.props.playlist.title}</div>
             <div className="item__title">{this.props.playlist.title}</div>
             <span className="item__duration">{ numTracks }</span>
           </div>
@@ -108,4 +108,4 @@ var PlaylistListItem = React.createClass({
 
 })
 
-module.exports = PlaylistListItem
+module.exports = PlaylistItem

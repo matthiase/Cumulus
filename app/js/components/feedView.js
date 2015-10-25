@@ -2,7 +2,7 @@
 
 var React             = require('react')
 var ListItem          = require('./ListItem')
-var PlaylistListItem  = require('./PlaylistListItem')
+var FeedItem  = require('./FeedItem')
 
 var classNames        = require('classnames')
 
@@ -120,14 +120,14 @@ var FeedView = React.createClass({
 
           else if (track.kind === 'playlist')
             return (
-              <PlaylistListItem
+              <FeedItem
                 key          = {track.id}
                 playlist     = {track}
                 tracks       = {track.tracks}
                 currentTrack = {this.state.currentTrack}
                 currentAudio = {this.state.currentAudio}
               >
-              </PlaylistListItem>
+              </FeedItem>
             )
 
           }, this)}

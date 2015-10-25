@@ -1,7 +1,7 @@
 'use strict';
 
 var React             = require('react')
-var PlaylistListItem  = require('./PlaylistListItem')
+var PlaylistItem  = require('./PlaylistItem')
 
 var classNames        = require('classnames')
 
@@ -62,14 +62,14 @@ var PlaylistsView = React.createClass({
       <section className={classes}>
         {this.state.playlists.map(function(playlist) {
           return (
-            <PlaylistListItem
+            <PlaylistItem
               key          = {playlist.id}
               playlist     = {playlist}
               tracks       = {playlist.tracks}
               currentTrack = {this.state.currentTrack}
               currentAudio = {this.state.currentAudio}
             >
-            </PlaylistListItem>
+            </PlaylistItem>
           )
         }, this)}
       </section>
