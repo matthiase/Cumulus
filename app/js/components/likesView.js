@@ -2,6 +2,7 @@
 
 var React             = require('react')
 var ListItem          = require('./ListItem')
+var Header            = require('./headerSection')
 
 var classNames        = require('classnames')
 
@@ -94,30 +95,33 @@ var LikesView = React.createClass({
     })
 
     return (
-      <section className={classes} onScroll={this._scrollListener} ref="section">
-        {this.state.tracks.map(function(track) {
+      <div>
+        <Header />
+        <section className={classes} onScroll={this._scrollListener} ref="section">
+          {this.state.tracks.map(function(track) {
 
-          var me      = this.state.currentTrack.id === track.id
+            var me      = this.state.currentTrack.id === track.id
 
-          var paused  = me ? this.state.currentAudio.paused  : true
-          var loading = me ? this.state.currentAudio.loading : false
-          var error   = me ? this.state.currentAudio.error   : !track.streamable
-          var active  = me && !error
+            var paused  = me ? this.state.currentAudio.paused  : true
+            var loading = me ? this.state.currentAudio.loading : false
+            var error   = me ? this.state.currentAudio.error   : !track.streamable
+            var active  = me && !error
 
-          return (
-            <ListItem
-              key     = { track.id }
-              track   = { track }
-              active  = { active }
-              paused  = { paused }
-              loading = { loading }
-              error   = { error }
-            >
-            </ListItem>
-          )
-        }, this)}
-        <div className={page_loading}></div>
-      </section>
+            return (
+              <ListItem
+                key     = { track.id }
+                track   = { track }
+                active  = { active }
+                paused  = { paused }
+                loading = { loading }
+                error   = { error }
+              >
+              </ListItem>
+            )
+          }, this)}
+          <div className={page_loading}></div>
+        </section>
+      </div>
     );
   }
 

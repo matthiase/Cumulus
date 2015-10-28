@@ -11,6 +11,7 @@ var About           = require('./components/aboutView');
 var Likes           = require('./components/likesView');
 var Feed            = require('./components/feedView');
 var Playlists       = require('./components/playlistsView');
+var Songs           = require('./components/songsView');
 
 var Config          = Remote.require('./lib/config');
 var SoundCloud      = require('./utils/soundcloud');
@@ -24,6 +25,7 @@ var routes = (
     <Router.DefaultRoute name="feed" handler={Feed}/>
     <Route name="likes" handler={Likes}/>
     <Route name="playlists" handler={Playlists}/>
+    <Route name="songs" handler={Songs}/>
     <Route name="about" handler={About}/>
   </Route>
 );

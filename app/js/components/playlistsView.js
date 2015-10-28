@@ -1,7 +1,8 @@
 'use strict';
 
 var React             = require('react')
-var PlaylistItem  = require('./PlaylistItem')
+var PlaylistItem      = require('./PlaylistItem')
+var Header            = require('./headerSection')
 
 var classNames        = require('classnames')
 
@@ -59,20 +60,23 @@ var PlaylistsView = React.createClass({
     })
 
     return (
-      <section className={classes}>
-        {this.state.playlists.map(function(playlist) {
-          return (
-            <PlaylistItem
-              key          = {playlist.id}
-              playlist     = {playlist}
-              tracks       = {playlist.tracks}
-              currentTrack = {this.state.currentTrack}
-              currentAudio = {this.state.currentAudio}
-            >
-            </PlaylistItem>
-          )
-        }, this)}
-      </section>
+      <div>
+        <Header />
+        <section className={classes}>
+          {this.state.playlists.map(function(playlist) {
+            return (
+              <PlaylistItem
+                key          = {playlist.id}
+                playlist     = {playlist}
+                tracks       = {playlist.tracks}
+                currentTrack = {this.state.currentTrack}
+                currentAudio = {this.state.currentAudio}
+              >
+              </PlaylistItem>
+            )
+          }, this)}
+        </section>
+      </div>
     );
   }
 

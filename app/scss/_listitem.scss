@@ -41,6 +41,58 @@
 
   }
 
+  &.playlist .playlist__header__dark {
+    height: 85px;
+    position: relative;
+    background-position: left top;
+    background-size: 84px;
+    background-repeat: no-repeat;
+    border-bottom: solid 1px #F3F3F3;
+    //padding-bottom: 1px;
+    background-color: #FCFCFC;
+    //color: #FFF;
+
+    .header__info {
+      height: 84px;
+      margin-left: 84px;
+      font-size: 13px;
+      position: relative;
+      padding-left: 10px;
+      background-image: linear-gradient(180deg, #E3E3E3, #FCFCFC);
+    }
+
+    .header__button {
+      position: absolute;
+      top: 4px;
+      right: 10px;
+      color: #666;
+      font-size: 16px;
+    }
+
+    .header__field__username {
+      position: absolute;
+      top: 6px;
+      left: 10px;
+      color: #888;
+    }
+
+    .header__field__title {
+      position: absolute;
+      top: 21px;
+      left: 10px;
+      color: #333;
+    }
+
+    .header__field__tracks {
+      position: absolute;
+      top: 37px;
+      left: 10px;
+      color: #888;
+      font-size: 11px;
+    }
+
+  }
+
   &.playlist .playlist__header {
     &:hover, &.active {
       background-color: rgba(#f50, 0.05);

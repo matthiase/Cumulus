@@ -12,7 +12,6 @@ var CumulusApp   = React.createClass({
 
     return (
       <div className="cumulusapp">
-        <Header />
         <div className='content__wrapper'>
           <RouteHandler />
         </div>

@@ -26,6 +26,10 @@ var PlaylistsStore = McFly.createStore({
     return _playlists
   },
 
+  find: function(predicate) {
+    return _.find(_playlists, predicate);
+  },
+
   getTracks: function() {
     return _tracks
   },
