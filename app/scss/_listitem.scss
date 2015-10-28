@@ -48,9 +48,7 @@
     background-size: 84px;
     background-repeat: no-repeat;
     border-bottom: solid 1px #F3F3F3;
-    //padding-bottom: 1px;
     background-color: #FCFCFC;
-    //color: #FFF;
 
     .header__info {
       height: 84px;
@@ -65,8 +63,13 @@
       position: absolute;
       top: 4px;
       right: 10px;
-      color: #666;
+      color: rgba(0, 0, 0, .40);
       font-size: 16px;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: right;
+      letter-spacing: 0.5px;
+      &.active, &:hover { color: rgba(0, 0, 0, .80); }
     }
 
     .header__field__username {
@@ -90,7 +93,6 @@
       color: #888;
       font-size: 11px;
     }
-
   }
 
   &.playlist .playlist__header {

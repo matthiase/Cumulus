@@ -42,7 +42,6 @@ var SongsView = React.createClass({
     var numTracks = this.state.playlist.tracks.length + ' track'
       + (this.state.playlist.tracks.length > 1 ? 's' : '')
 
-
     return (
       <div>
         <div className={listItemClasses}>
@@ -51,7 +50,7 @@ var SongsView = React.createClass({
               <div className="header__info">
                 <div>
                   <span className="header__field__username">{this.state.playlist.user.username}</span>
-                  <Link to="playlists" className="header__button"><i className="fi-x"></i></Link>
+                  <Link to="playlists" className="header__button"><i className="fa fa-chevron-down"></i></Link>
                 </div>
                 <div>
                   <span className="header__field__title">{this.state.playlist.title}</span>
